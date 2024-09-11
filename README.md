@@ -1,1 +1,1 @@
-ZMK config for corne xiao
+# ZMK config for corne xiao
