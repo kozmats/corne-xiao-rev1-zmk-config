@@ -108,7 +108,7 @@
         };
 
         // Ctrl + I を Tab に設定
-        combo_ctrl_h_tab {
+        combo_ctrl_i_tab {
             timeout-ms = <50>;
             key-positions = <12 8>;  // Ctrl の位置と I の位置
             bindings = <&kp TAB>;
