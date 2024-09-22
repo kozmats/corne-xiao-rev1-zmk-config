@@ -89,8 +89,36 @@
         // Ctrl + G を Esc に設定
         combo_ctrl_g_esc {
             timeout-ms = <50>;
-            key-positions = <12 1>;  // Ctrl の位置と G の位置
+            key-positions = <12 17>;  // Ctrl の位置と G の位置
             bindings = <&kp ESC>;
         };
+
+        // Ctrl + H を Backspace に設定
+        combo_ctrl_h_backspace {
+            timeout-ms = <50>;
+            key-positions = <12 18>;  // Ctrl の位置と H の位置
+            bindings = <&kp BSPC>;
+        };
+
+        // Ctrl + D を Delete に設定
+        combo_ctrl_d_delete {
+            timeout-ms = <50>;
+            key-positions = <12 15>;  // Ctrl の位置と D の位置
+            bindings = <&kp DEL>;
+        };
+
+        // Ctrl + I を Tab に設定
+        combo_ctrl_h_tab {
+            timeout-ms = <50>;
+            key-positions = <12 8>;  // Ctrl の位置と I の位置
+            bindings = <&kp TAB>;
+        };
+
+        // Ctrl + M を Enter に設定
+        combo_ctrl_m_enter {
+            timeout-ms = <50>;
+            key-positions = <12 34>;  // Ctrl の位置と M の位置
+            bindings = <&kp RET>;
+        };        
     };
 };
