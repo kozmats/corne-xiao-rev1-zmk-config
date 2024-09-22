@@ -3,55 +3,66 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-        keymap {
-                compatible = "zmk,keymap";
+    keymap {
+        compatible = "zmk,keymap";
 
-                default_layer {
+        default_layer {
 // -------------------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |                    |  Y  |  U   |  I  |  O  |  P  |  -   |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |                    |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |  MUTE  |  |        |  N  |  M   |  ,  |  .  |  /  | SHFT |
-//           | GUI | LWR_SPC | SHFT_SPC |                    | ENT | ALT  | RSE |
-                        bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T                   &kp Y &kp U  &kp I     &kp O   &kp P    &kp MINUS
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G                   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+// |  TAB |  Q  |  W  |  E  |  R  |  T  |              |  Y  |  U   |  I  |  O  |  P  |  -   |
+// | CTRL |  A  |  S  |  D  |  F  |  G  |              |  H  |  J   |  K  |  L  |  ;  |  '   |
+// | SHFT |  Z  |  X  |  C  |  V  |  B  |  MUTE  |   | |  N  |  M   |  ,  |  .  |  /  | SHFT |
+//           | GUI | LWR_SPC | SHFT_SPC |              | ENT | ALT  | RSE |
+            bindings = <
+   &kp TAB   &kp Q &kp W &kp E &kp R &kp T           &kp Y &kp U  &kp I     &kp O   &kp P    &kp MINUS
+   &kp LCTRL &kp A &kp S &kp D &kp F &kp G           &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B &kp C_MUTE  &none &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                  &kp LGUI &lt 1 SPC &mt LSHFT SPC         &kp RET &kp LALT &mo 2 
-                        >;
+          &kp LGUI &lt 1 SPC &mt LSHFT SPC     &kp RET &kp LALT &mo 2 
+            >;
 
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-                };
-                lower_layer {
-
-// ------------------------------------------------------------------------------------------------
-// |  ESC |  1  |  2  |  3  |  4  |  5  |                    |  6  |  7  |  8  |  9  |  0  |  =   |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |                    |  ~  |     |     |  {  |  }  |  F12 |
-// | SHFT | F1  | F2  | F3  | F4  | F5  |  boot  |  |        |     |     |     |  [  |  ]  |  F11 |
-//                    | GUI |     | SPC |                    | ENT |     | ALT |
-                        bindings = <
-   &kp ESC    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5                           &kp N6   &kp N7   &kp N8 &kp N9    &kp N0  &kp EQUAL
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                     &kp TILDE &none   &none  &kp LBRC &kp RBRC  &kp F12
-   &kp LSHFT  &kp F1       &kp F2       &kp F3       &kp F4       &kp F5       &bootloader  &none  &none     &none   &none  &kp LBKT &kp RBKT &kp F11
-                  &kp LGUI &trans &kp SPC                       &kp RET &trans &kp LALT
-                        >;
-
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-                };
-
-                raise_layer {
-// ------------------------------------------------------------------------------------------------
-// |  ESC |  !  |  @  |  #  |  $  |  %  |                    |  ^  |  &  |  *  |  (  |  )  |  =   |
-// | CTRL |     |     |     |     |     |                    |  -  |  =  | UP  |    |  \  |  `   |
-// | SHFT |     |     |     |     |     |        |  |  boot  |  _  | LFT | DWN | RGT | "|" |  ~   |
-//                    | GUI |     | SPC |                    | ENT |     | ALT |
-                        bindings = <
-   &kp ESC  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT                    &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp EQUAL
-   &kp LCTRL &trans   &trans &trans   &trans   &trans                       &kp MINUS &kp EQUAL &kp UP          &none &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans    &none  &bootloader &kp UNDER &kp LEFT  &kp DOWN        &kp RIGHT &kp PIPE &kp TILDE
-                             &kp LGUI &trans   &kp SPC                    &kp RET   &trans    &kp LALT
-                        >;
-
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-                };
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
+        lower_layer {
+
+// ------------------------------------------------------------------------------------------------
+// |  ESC |  1  |  2  |  3  |  4  |  5  |              |  6  |  7  |  8  |  9  |  0  |  =   |
+// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |              |  ~  |     |     |  {  |  }  |  F12 |
+// | SHFT | F1  | F2  | F3  | F4  | F5  |  boot  |   | |     |     |     |     |  [  |  ]  |  F11 |
+//                    | GUI |     | SPC |              | ENT |     | ALT |
+            bindings = <
+   &kp ESC    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5               &kp N6   &kp N7   &kp N8 &kp N9    &kp N0  &kp EQUAL
+   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4             &kp TILDE &none   &none  &kp LBRC &kp RBRC  &kp F12
+   &kp LSHFT  &kp F1       &kp F2       &kp F3       &kp F4       &kp F5       &bootloader  &none  &none     &none   &none  &kp LBKT &kp RBKT &kp F11
+          &kp LGUI &trans &kp SPC               &kp RET &trans &kp LALT
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        raise_layer {
+// ------------------------------------------------------------------------------------------------
+// |  ESC |  !  |  @  |  #  |  $  |  %  |              |  ^  |  &  |  *  |  (  |  )  |  =   |
+// | CTRL |     |     |     |     |     |              |  -  |  =  | UP  |     |  \  |  `   |
+// | SHFT |     |     |     |     |     |  boot  |   | |  _  | LFT | DWN | RGT | "|" |  ~   |
+//                    | GUI |     | SPC |              | ENT |     | ALT |
+            bindings = <
+   &kp ESC  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT            &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp EQUAL
+   &kp LCTRL &trans   &trans &trans   &trans   &trans               &kp MINUS &kp EQUAL &kp UP      &none &kp BSLH &kp GRAVE
+   &kp LSHFT &trans   &trans &trans   &trans   &trans    &none  &bootloader &kp UNDER &kp LEFT  &kp DOWN    &kp RIGHT &kp PIPE &kp TILDE
+                 &kp LGUI &trans   &kp SPC            &kp RET   &trans    &kp LALT
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combo";
+
+        // Ctrl + N のコンボを設定
+        combo_ctrl_n_down {
+            timeout-ms = <50>; // コンボ入力のタイムアウト時間（ミリ秒）
+            key-positions = <0 9>; // Ctrl と N のキー位置（以下で説明）
+            bindings = <&kp DOWN>; // Ctrl + N で Downキーを送信
+        };
+    };
 };
