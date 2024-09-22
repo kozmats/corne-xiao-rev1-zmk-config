@@ -61,28 +61,28 @@
         // Ctrl + N を Down に設定
         combo_ctrl_n_down {
             timeout-ms = <50>;
-            key-positions = <1 10>;  // Ctrl の位置と N の位置
+            key-positions = <12 33>;  // Ctrl の位置と N の位置
             bindings = <&kp DOWN>;
         };
 
         // Ctrl + F を Right に設定
         combo_ctrl_f_right {
             timeout-ms = <50>;
-            key-positions = <1 14>;  // Ctrl の位置と F の位置
+            key-positions = <12 16>;  // Ctrl の位置と F の位置
             bindings = <&kp RIGHT>;
         };
 
         // Ctrl + B を Left に設定
         combo_ctrl_b_left {
             timeout-ms = <50>;
-            key-positions = <1 21>;  // Ctrl の位置と B の位置
+            key-positions = <12 29>;  // Ctrl の位置と B の位置
             bindings = <&kp LEFT>;
         };
 
         // Ctrl + G を Esc に設定
         combo_ctrl_g_esc {
             timeout-ms = <50>;
-            key-positions = <1 12>;  // Ctrl の位置と G の位置
+            key-positions = <12 17>;  // Ctrl の位置と G の位置
             bindings = <&kp ESC>;
         };
     };
