@@ -19,7 +19,7 @@
     status = "okay";
 };
 
-# see: https://github.com/cdc-mkb/zmk/commit/eb8889883d1e91f58a42f0babc17a10fa3fa1b4a#diff-37aef75709242f012d17c7efe6b1ae3bdeecd5560fab5bf05269cd0b6d44c356
+// see: https://github.com/cdc-mkb/zmk/commit/eb8889883d1e91f58a42f0babc17a10fa3fa1b4a#diff-37aef75709242f012d17c7efe6b1ae3bdeecd5560fab5bf05269cd0b6d44c356
 &pro_micro_i2c {
 	status = "okay";
 	trackball_pim447@a {
