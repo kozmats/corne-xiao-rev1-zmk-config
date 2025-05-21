@@ -23,12 +23,12 @@
         
         lower_layer {
 // ------------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |              |  6  |  7  |  8  |  9  |  0  |  =   |
+// |  `   |  1  |  2  |  3  |  4  |  5  |              |  6  |  7  |  8  |  9  |  0  |  =   |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |              |  ~  |     |     |  {  |  }  |  \   |
 // | SHFT | F1  | F2  | F3  | F4  | F5  |  boot  |   | |     |     |     |  [  |  ]  | SHFT |
 //                    | GUI |     | SPC |              | ENT |     | ALT |
             bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5                           &kp N6   &kp N7   &kp N8 &kp N9    &kp N0  &kp EQUAL
+   &kp GRAVE  &kp N1       &kp N2       &kp N3       &kp N4       &kp N5                           &kp N6   &kp N7   &kp N8 &kp N9    &kp N0  &kp EQUAL
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                     &kp TILDE &none   &none  &kp LBRC &kp RBRC &kp BSLH
    &kp LSHFT  &kp F1       &kp F2       &kp F3       &kp F4       &kp F5       &bootloader  &none  &none     &none   &none  &kp LBKT &kp RBKT &kp RSHFT
           &kp LGUI &trans &kp SPC                                                                  &kp RET &trans &kp LALT
